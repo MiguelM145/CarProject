@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='view_car.css') }}">
+</head>
+<body>
+    <div id="header">
+        <div id="button-box"> 
+            <a href="/dashboard" class="buttons">Dashboard</a>
+            <a href="/logout" class="buttons">Logout</a>
+        </div>
+    </div>
+        <div id="car_info">
+            <div class="info">  
+                <p id="price">${{car.price}}</p>
+            </div>
+            <div class="info">
+                <h3>Model: </h3>
+                <p>{{car.model|capitalize}}</p>
+            </div>
+            <div class="info">   
+                <h3>Make: </h3>
+                <p>{{car.make|capitalize}} </p>
+            </div>
+            <div class="info">
+                <h3>Year </h3>
+                <p>{{car.year}}</p>
+            </div>
+            <div class="info">
+                <h3>Description: </h3>
+                <p>{{car.desc|capitalize}}</p>
+            </div>
+
+            <h2 id="posted_name"> Posted by: {{car.posted_by|capitalize}} </h2>
+            <div id="purchase_box">
+            <a href="/delete/{{session['id']}}" id="purchase_button">Purchase</a>
+            </div>
+        </div>
+
+</body>
+</html>
