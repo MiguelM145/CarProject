@@ -1,0 +1,70 @@
+*{
+    margin: 0px; 
+}
+
+body{
+    background-color: rgb(134, 181, 243); 
+}
+
+h1{
+    color: yellow; 
+    font-size: 70px;
+    margin-left: 20px;
+    margin-top: 20px;  
+}
+
+#register{
+    display: flex; 
+    flex-direction: column;
+}
+
+#login{
+    display: flex; 
+    flex-direction: column;
+}
+
+#container{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    margin-top: 30px; 
+}
+
+h2{
+    font-size: 60px; 
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 30px; 
+    font-weight: bold; 
+    display: inline-block;
+    width: 200px; 
+}
+
+input{
+    height: 30px; 
+    width: 250px; 
+}
+
+div{
+    margin-bottom: 20px; 
+}
+
+.submit{
+    background-color: rgb(17, 92, 136); 
+    font-size: 20px; 
+    width: 120px; 
+    box-shadow: 4px 4px black ;
+    color: yellow; 
+}
+
+.submit:hover{
+    background-color: rgb(255, 130, 255); 
+}
+
+#warning{
+    color: rgb(214, 8, 8);
+    margin-bottom: 10px; 
+    font-size: 20px; 
+}

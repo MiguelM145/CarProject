@@ -1,0 +1,97 @@
+
+
+#header{
+    display: flex; 
+    justify-content: space-between;
+    margin-left: 200px; 
+    margin-right: 250px; 
+    
+}
+
+body{
+    background-color: rgb(134, 181, 243); 
+}
+
+.buttons{
+    margin-left: 20px; 
+    font-size: 30px; 
+    background-color: rgb(17, 92, 136);
+    text-decoration: none;
+    color: yellow; 
+    width: 150px; 
+    display: inline-block; 
+    text-align: center; 
+}
+
+#button-box{
+    margin-top: 90px; 
+}
+
+
+h1{
+    font-size: 50px; 
+    color: rgb(255, 239, 96);
+}
+
+.info{
+    font-size: 40px; 
+    font-weight: bold; 
+    display: inline-block;
+    width: 300px; 
+    
+}
+
+.food{
+    margin-bottom: 30px; 
+}
+
+#create_food{
+    display: flex; 
+    flex-direction: column;
+}
+
+#container{
+    display: flex;
+    justify-content: center; 
+    margin-top: 30px; 
+}
+
+.input_box{
+    width: 400px; 
+    height: 30px; 
+    font-size: 20px; 
+}
+
+.text-area{
+    width: 400px; 
+    height: 80px; 
+    font-size: 20px; 
+}
+
+
+.answer{
+    font-size: 30px; 
+}
+
+#submit{
+    background-color: rgb(17, 92, 136); 
+    width: 150px; 
+    height: 30px; 
+    font-size: 20px; 
+    box-shadow: 4px 4px black;
+    color: yellow; 
+    margin-top: 20px; 
+}
+
+#submit:hover{
+    background-color: rgb(240, 21, 240); 
+}
+
+p{
+    color: red;
+    font-size: 20px; 
+}
+
+#form_contain{
+    width: 800px; 
+}

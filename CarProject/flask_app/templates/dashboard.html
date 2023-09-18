@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='dashboard.css') }}">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <h1>Welcome to Car Dealz, {{session['first_name']|capitalize}}</h1>
+            <h2>Cars for sale: </h2>
+        </div>  
+        <div id="button-box"> 
+            <a href="/logout" class="buttons">Logout</a>
+        </div>
+    </div>
+    <div id="table-box">
+        <table>
+            <thead>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Seller</th>
+                <th>Actions</th>
+            </thead>
+
+            {% for car in cars %}
+            <tbody>
+                <td>{{car.model|capitalize}}</td>
+                <td>{{car.year}}</td>
+                <td>{{car.posted_by.first_name|capitalize}} {{car.posted_by.last_name|capitalize}}</td>
+                
+                <td>
+                    {% if session['first_name'] != car.posted_by.first_name %}
+                        <a href='/view/car/{{car.id}}'>view</a>  <label>|</label>
+                    {% endif %}
+                    {% if session['first_name'] == car.posted_by.first_name %}
+                        <a href='/edit/car/{{car.id}}'>edit</a><label>|</label>
+                        <a href='/delete/{{car.id}}'> delete </a></td>
+                    {% endif %}
+            </tbody>
+            {% endfor %}
+        </table>
+        <a href="/add/car" class="buttons">Add A Car</a>
+    </div>
+
+</body>
+</html>
